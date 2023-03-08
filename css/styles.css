@@ -66,6 +66,7 @@ img {
 .header-logo span {
 	color: var(--logo-color);
 }
+
 .header-navigation {
 	display: flex;
 	align-items: center;
@@ -87,6 +88,23 @@ img {
 	text-decoration: none;
 	color: var(--basic-color);
 }
+.header-item {
+	position: relative;
+}
+.header-link.curent::after {
+	content: "";
+	width: 100%;
+	height: 4px;
+	left: 0px;
+	top: 44px;
+	background-color: var(--accent-color);
+	border-radius: 2px;
+	display: block;
+	position: absolute;
+}
+.header-link:is(:hover, :focus) .header-link::after {
+}
+
 .header-adress {
 	display: flex;
 	gap: 40px;
@@ -100,6 +118,9 @@ img {
 	font-style: normal;
 	color: var(--adress-description-color);
 	align-items: center;
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contacts:active {
 	color: var(--accent-color);
@@ -107,8 +128,6 @@ img {
 .header-contacts:hover,
 .header-contacts:focus {
 	color: var(--accent-color);
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Банер */
 .hero {
@@ -150,12 +169,13 @@ img {
 	border: none;
 	min-width: 169px;
 	padding: 16px 32px;
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
 	background-color: var(--accent-color);
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Колонки */
 .strategy {
@@ -282,11 +302,12 @@ img {
 	background-color: var(--logo-color);
 	background-repeat: no-repeat;
 	fill: var(--footer-logo-color);
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social-link:is(:hover, :focus) {
 	background-color: var(--accent-color);
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers {
 	padding: 130px 0 120px;
@@ -320,12 +341,13 @@ img {
 	border-radius: 4px;
 	width: 100%;
 	height: 100%;
+	transition-property: color, border;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-link:is(:hover, :focus) {
 	color: var(--accent-color);
 	border: 1px solid var(--accent-color);
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-icon {
 	fill: currentColor;
@@ -387,11 +409,12 @@ img {
 	justify-content: center;
 	align-items: center;
 	fill: var(--team-background-color);
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icon-link:is(:hover, :focus) {
 	background-color: #31d0aa;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Портфоліо */
@@ -419,8 +442,8 @@ img {
 	font-family: inherit;
 	border-radius: 4px;
 	transition-property: background-color, color, box-shadow;
-	transition-duration: 250ms, 250ms, 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-btn:hover,
 .filter-btn:focus {
