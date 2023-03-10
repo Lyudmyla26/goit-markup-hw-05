@@ -102,8 +102,6 @@ img {
 	display: block;
 	position: absolute;
 }
-.header-link:is(:hover, :focus) .header-link::after {
-}
 
 .header-adress {
 	display: flex;
@@ -309,6 +307,7 @@ img {
 .team-social-link:is(:hover, :focus) {
 	background-color: var(--accent-color);
 }
+/* Customers */
 .customers {
 	padding: 130px 0 120px;
 }
@@ -352,7 +351,8 @@ img {
 .customers-icon {
 	fill: currentColor;
 }
-
+/* /Customers */
+/* footer */
 .footer-content {
 	display: flex;
 }
@@ -416,7 +416,42 @@ img {
 .footer-icon-link:is(:hover, :focus) {
 	background-color: #31d0aa;
 }
-
+/* /footer */
+/* modal */
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background-color: rgba(46, 47, 66, 0.4);
+}
+.modal {
+	position: absolute;
+	min-height: 500px;
+	width: 408px;
+	padding: 20px;
+	background-color: #fcfcfc;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* .modal-close {
+	border: 2px solid red;
+	display: block;
+	margin-left: auto;
+	cursor: pointer;
+	width: 100px;
+} */
+/* .is-hiden {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+} */
+/* /modal */
 /* Портфоліо */
 
 .filter-list {

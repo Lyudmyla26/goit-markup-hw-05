@@ -42,7 +42,7 @@
 			<section class="hero">
 				<div class="container hero-container">
 					<h1 class="hero-title">Effective Solutions for Your Business</h1>
-					<button type="button" class="hero-btn">Order Service</button>
+					<button type="button" data-modal-open class="hero-btn">Order Service</button>
 				</div>
 			</section>
 			<!-- /Банер -->
@@ -272,6 +272,7 @@
 					</ul>
 				</div>
 			</section>
+			<!-- Customers -->
 			<section class="customers">
 				<div class="container">
 					<h2 class="customers-title">Customers</h2>
@@ -322,6 +323,7 @@
 				</div>
 			</section>
 		</main>
+		<!-- footer -->
 		<footer class="footer">
 			<div class="container">
 				<div class="footer-content">
@@ -367,5 +369,12 @@
 				</div>
 			</div>
 		</footer>
+		<!-- modal -->
+		<div class="backdrop" is-hidden data-modal>
+			<div class="modal">
+				<button class="button" class="modal-close" data-modal-close>x</button>
+			</div>
+		</div>
+		<script src="./js/main.js"></script>
 	</body>
 </html>
