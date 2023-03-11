@@ -16,6 +16,7 @@ body {
 	--footer-description-color: #e7e9fc;
 	--footer-logo-color: #f4f4fd;
 	--customers-icom: #8e8f99;
+	--modal-fon: #fcfcfc;
 }
 h1,
 h2,
@@ -432,25 +433,45 @@ img {
 	min-height: 500px;
 	width: 408px;
 	padding: 20px;
-	background-color: #fcfcfc;
+	background-color: var(--modal-fon);
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-/* .modal-close {
-	border: 2px solid red;
+.modal-close {
+	position: relative;
 	display: block;
 	margin-left: auto;
 	cursor: pointer;
-	width: 100px;
-} */
-/* .is-hiden {
+	border-radius: 4px;
+	width: 24px;
+	height: 24px;
+	background: var(--footer-description-color);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	color: #2e2f42;
+}
+.modal-img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	fill: currentColor;
+}
+.modal-close:is(:hover, :focus) {
+	background-color: var(--accent-color);
+	color: #ffffff;
+}
+
+.is-hidden {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
-} */
+}
+
 /* /modal */
 /* Портфоліо */
 

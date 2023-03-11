@@ -370,11 +370,15 @@
 			</div>
 		</footer>
 		<!-- modal -->
-		<div class="backdrop" is-hidden data-modal>
+		<div class="backdrop is-hidden" data-modal>
 			<div class="modal">
-				<button class="button" class="modal-close" data-modal-close>x</button>
+				<button type="button" data-modal-close class="modal-close">
+					<svg width="8px" height="8px" class="modal-img">
+						<use href="./images/symbol-defs.svg#icon-Vector"></use>
+					</svg>
+				</button>
 			</div>
 		</div>
-		<script src="./js/main.js"></script>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
